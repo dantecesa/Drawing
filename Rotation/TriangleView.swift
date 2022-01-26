@@ -22,13 +22,14 @@ struct Triangle: Shape {
 
 struct TriangleView: View {
     @State var strokeLineWidth: Double = 20
-    @State var hueSlider: Double = 0
     @State var rotationSlider: Double = 0
+    @State var selectedColor: Int = 0
+    let colors: [(String, Color)] = [("Red", .red), ("Orange", .orange), ("Green", .green), ("Blue", .blue), ("Indigo", .indigo), ("Purple", .purple)]
     
     var body: some View {
         VStack(spacing: 50) {
             Triangle()
-                .stroke(.white, style: StrokeStyle(lineWidth: strokeLineWidth, lineCap: .round, lineJoin: .round))
+                .stroke(colors[selectedColor].1, style: StrokeStyle(lineWidth: strokeLineWidth, lineCap: .round, lineJoin: .round))
                 .rotationEffect(.degrees(rotationSlider))
                 .frame(width: 200, height: 200)
                 
@@ -46,11 +47,11 @@ struct TriangleView: View {
                         .foregroundColor(.white)
                 }
                 
-                Text("Hue: \(String(format: "%.0f", hueSlider))")
-                Slider(value: $hueSlider, in: 0...100) {
-                    Text("Hue")
-                        .foregroundColor(.white)
-                }
+                Picker("Color", selection: $selectedColor) {
+                    ForEach(0..<colors.count) { index in
+                        Text(colors[index].0)
+                    }
+                }.pickerStyle(.inline)
             }
             
         }.preferredColorScheme(.dark)
