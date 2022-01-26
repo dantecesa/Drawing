@@ -13,6 +13,8 @@ struct ContentView: View {
             List {
                 NavigationLink("Triangle", destination: { TriangleView() })
                 
+                NavigationLink("Arrow", destination: { ArrowView() })
+                
                 NavigationLink("Arc", destination: { ArcView() })
                 
                 NavigationLink("Flower", destination: { FlowerView() })
