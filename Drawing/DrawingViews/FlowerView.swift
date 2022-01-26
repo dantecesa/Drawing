@@ -11,6 +11,14 @@ struct Flower: Shape {
     var petalOffset: Double = -20
     var petalWidth: Double = 100
     
+    var animatableData: AnimatablePair<Double, Double> {
+        get { AnimatablePair(petalOffset, petalWidth) }
+        set {
+            petalOffset = newValue.first
+            petalWidth = newValue.second
+        }
+    }
+    
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
@@ -30,16 +38,18 @@ struct Flower: Shape {
 }
 
 struct FlowerView: View {
-    @State private var petalOffset: Double = -20.0
-    @State private var petalWidth: Double = 100.0
-    @State private var eoFillOn: Bool = true
-    @State private var selectedColor: Int = 0
+    @State private var petalOffset: Double = -5
+    @State private var petalWidth: Double = 38
+    @State private var eoFillOn: Bool = false
+    @State private var selectedColor: Int = 5
     
     var body: some View {
         VStack(spacing: 50) {
             Flower(petalOffset: petalOffset, petalWidth: petalWidth)
                 .fill(DrawingAppColor.colors[selectedColor].1, style: FillStyle(eoFill: eoFillOn))
                 .animation(.default, value: selectedColor)
+                .animation(.default, value: petalOffset)
+                .animation(.default, value: petalWidth)
                 .frame(width: 300, height: 300)
             
             List {

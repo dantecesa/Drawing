@@ -23,7 +23,7 @@ struct Triangle: Shape {
 struct TriangleView: View {
     @State var strokeLineWidth: Double = 20
     @State var rotationSlider: Double = 0
-    @State var selectedColor: Int = 0
+    @State var selectedColor: Int = 1
     
     var body: some View {
         VStack(spacing: 50) {

@@ -8,5 +8,5 @@
 import SwiftUI
 
 struct DrawingAppColor {
-    static let colors: [(String, Color)] = [("Red", .red), ("Orange", .orange), ("Green", .green), ("Blue", .blue), ("Indigo", .indigo), ("Purple", .purple)]
+    static let colors: [(String, Color)] = [("Red", .red), ("Orange", .orange), ("Yellow", .yellow), ("Green", .green), ("Blue", .blue), ("Indigo", .indigo), ("Purple", .purple)]
 }
