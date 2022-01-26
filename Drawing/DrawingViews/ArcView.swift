@@ -35,11 +35,12 @@ struct Arc: InsettableShape {
 struct ArcView: View {
     @State private var startAngle: Double = 0
     @State private var endAngle: Double = 270
+    @State private var selectedColor: Int = 0
     
     var body: some View {
         VStack(spacing: 50) {
             Arc(startAngle: .degrees(startAngle), endAngle: .degrees(endAngle), clockwise: true)
-                .stroke(.blue, style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
+                .stroke(DrawingAppColor.colors[selectedColor].1, style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
                 .frame(width: 300, height: 300)
             
             List {
@@ -48,6 +49,8 @@ struct ArcView: View {
                 
                 Text("End Angle: \(String(format: "%.0f", endAngle))")
                 Slider(value: $endAngle, in: 0...360, label: { Text("End Angle") })
+                
+                ColorHelperView(selectedColor: $selectedColor)
             }
         }.preferredColorScheme(.dark)
     }

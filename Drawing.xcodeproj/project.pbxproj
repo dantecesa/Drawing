@@ -16,6 +16,7 @@
 		6BBBCAA7279C9FB500118B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BBBCAA6279C9FB500118B45 /* Assets.xcassets */; };
 		6BBBCAAA279C9FB500118B45 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BBBCAA9279C9FB500118B45 /* Preview Assets.xcassets */; };
 		6BD4F8FB27A0F903005B7C74 /* DrawingAppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD4F8FA27A0F903005B7C74 /* DrawingAppColors.swift */; };
+		6BD4F8FE27A0FA26005B7C74 /* ColorHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD4F8FD27A0FA26005B7C74 /* ColorHelperView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		6BBBCAA6279C9FB500118B45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BBBCAA9279C9FB500118B45 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6BD4F8FA27A0F903005B7C74 /* DrawingAppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingAppColors.swift; sourceTree = "<group>"; };
+		6BD4F8FD27A0FA26005B7C74 /* ColorHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelperView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +65,8 @@
 			children = (
 				6BBBCAA2279C9FB400118B45 /* DrawingApp.swift */,
 				6B565AFD27A0BDEC003001C6 /* ContentView.swift */,
-				6BD4F8FA27A0F903005B7C74 /* DrawingAppColors.swift */,
 				6BD4F8FC27A0F950005B7C74 /* DrawingViews */,
+				6BD4F8FF27A0FA2B005B7C74 /* HelperViews */,
 				6BBBCAA6279C9FB500118B45 /* Assets.xcassets */,
 				6BBBCAA8279C9FB500118B45 /* Preview Content */,
 			);
@@ -88,6 +90,15 @@
 				6BBBCAA4279C9FB400118B45 /* RGBCircles.swift */,
 			);
 			path = DrawingViews;
+			sourceTree = "<group>";
+		};
+		6BD4F8FF27A0FA2B005B7C74 /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				6BD4F8FA27A0F903005B7C74 /* DrawingAppColors.swift */,
+				6BD4F8FD27A0FA26005B7C74 /* ColorHelperView.swift */,
+			);
+			path = HelperViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +175,7 @@
 				6B565B0227A0C6C2003001C6 /* ArcView.swift in Sources */,
 				6BD4F8FB27A0F903005B7C74 /* DrawingAppColors.swift in Sources */,
 				6B565B0427A0D06D003001C6 /* FlowerView.swift in Sources */,
+				6BD4F8FE27A0FA26005B7C74 /* ColorHelperView.swift in Sources */,
 				6BBBCAA3279C9FB400118B45 /* DrawingApp.swift in Sources */,
 				6B565B0027A0BEB2003001C6 /* TriangleView.swift in Sources */,
 				6B565AFE27A0BDEC003001C6 /* ContentView.swift in Sources */,

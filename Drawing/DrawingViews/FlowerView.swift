@@ -33,11 +33,13 @@ struct FlowerView: View {
     @State private var petalOffset: Double = -20.0
     @State private var petalWidth: Double = 100.0
     @State private var eoFillOn: Bool = true
+    @State private var selectedColor: Int = 0
     
     var body: some View {
         VStack(spacing: 50) {
             Flower(petalOffset: petalOffset, petalWidth: petalWidth)
-                .fill(.white, style: FillStyle(eoFill: eoFillOn))
+                .fill(DrawingAppColor.colors[selectedColor].1, style: FillStyle(eoFill: eoFillOn))
+                .animation(.default, value: selectedColor)
                 .frame(width: 300, height: 300)
             
             List {
@@ -50,6 +52,8 @@ struct FlowerView: View {
                 Section {
                     Toggle("Fill Style", isOn: $eoFillOn)
                 }
+                
+                ColorHelperView(selectedColor: $selectedColor)
             }
         }.preferredColorScheme(.dark)
     }
