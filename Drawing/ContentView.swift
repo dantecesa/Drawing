@@ -19,6 +19,7 @@ struct ContentView: View {
                 
                 NavigationLink("RGB Circles", destination: { RGBCircles() })
             }
+            .padding(.top, 10)
             .navigationTitle("Drawing 101")
         }.preferredColorScheme(.dark)
     }
