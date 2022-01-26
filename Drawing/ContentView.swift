@@ -20,6 +20,8 @@ struct ContentView: View {
                 NavigationLink("Flower", destination: { FlowerView() })
                 
                 NavigationLink("RGB Circles", destination: { RGBCircles() })
+                
+                NavigationLink("Spirograph", destination: { SpirographView() })
             }
             .padding(.top, 10)
             .navigationTitle("Drawing 101")
