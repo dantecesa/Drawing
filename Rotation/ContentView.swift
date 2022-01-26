@@ -11,17 +11,13 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink("Triangle", destination: {
-                    TriangleView()
-                })
+                NavigationLink("Triangle", destination: { TriangleView() })
                 
-                NavigationLink("Arc", destination: {
-                    ArcView()
-                })
+                NavigationLink("Arc", destination: { ArcView() })
                 
-                NavigationLink("RGB Circles", destination: {
-                    RGBCircles()
-                })
+                NavigationLink("Flower", destination: { FlowerView() })
+                
+                NavigationLink("RGB Circles", destination: { RGBCircles() })
             }
             .navigationTitle("Drawing 101")
         }.preferredColorScheme(.dark)

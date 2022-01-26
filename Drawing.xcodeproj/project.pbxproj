@@ -10,6 +10,7 @@
 		6B565AFE27A0BDEC003001C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B565AFD27A0BDEC003001C6 /* ContentView.swift */; };
 		6B565B0027A0BEB2003001C6 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B565AFF27A0BEB2003001C6 /* TriangleView.swift */; };
 		6B565B0227A0C6C2003001C6 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B565B0127A0C6C2003001C6 /* ArcView.swift */; };
+		6B565B0427A0D06D003001C6 /* FlowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B565B0327A0D06D003001C6 /* FlowerView.swift */; };
 		6BBBCAA3279C9FB400118B45 /* RotationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBCAA2279C9FB400118B45 /* RotationApp.swift */; };
 		6BBBCAA5279C9FB400118B45 /* RGBCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBCAA4279C9FB400118B45 /* RGBCircles.swift */; };
 		6BBBCAA7279C9FB500118B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BBBCAA6279C9FB500118B45 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		6B565AFD27A0BDEC003001C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6B565AFF27A0BEB2003001C6 /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
 		6B565B0127A0C6C2003001C6 /* ArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
+		6B565B0327A0D06D003001C6 /* FlowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerView.swift; sourceTree = "<group>"; };
 		6BBBCA9F279C9FB400118B45 /* Drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BBBCAA2279C9FB400118B45 /* RotationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationApp.swift; sourceTree = "<group>"; };
 		6BBBCAA4279C9FB400118B45 /* RGBCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBCircles.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 		6BBBCA96279C9FB400118B45 = {
 			isa = PBXGroup;
 			children = (
+				6B565B0327A0D06D003001C6 /* FlowerView.swift */,
 				6BBBCAA1279C9FB400118B45 /* Rotation */,
 				6BBBCAA0279C9FB400118B45 /* Products */,
 			);
@@ -148,6 +151,7 @@
 			files = (
 				6BBBCAA5279C9FB400118B45 /* RGBCircles.swift in Sources */,
 				6B565B0227A0C6C2003001C6 /* ArcView.swift in Sources */,
+				6B565B0427A0D06D003001C6 /* FlowerView.swift in Sources */,
 				6BBBCAA3279C9FB400118B45 /* RotationApp.swift in Sources */,
 				6B565B0027A0BEB2003001C6 /* TriangleView.swift in Sources */,
 				6B565AFE27A0BDEC003001C6 /* ContentView.swift in Sources */,
