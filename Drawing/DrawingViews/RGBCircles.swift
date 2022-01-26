@@ -16,18 +16,21 @@ struct RGBCircles: View {
                 Circle()
                     .fill(LinearGradient(colors: [.red, .indigo], startPoint: .top, endPoint: .bottom))
                     .frame(width: 200 * amount, height: 200)
+                    .animation(.default, value: amount)
                     .offset(x: 50, y: -80)
                     .blendMode(.screen)
                 
                 Circle()
                     .fill(.green)
                     .frame(width: 200 * amount, height: 200)
+                    .animation(.default, value: amount)
                     .offset(x: -50, y: -80)
                     .blendMode(.screen)
                 
                 Circle()
                     .fill(.blue)
                     .frame(width: 200 * amount, height: 200)
+                    .animation(.default, value: amount)
                     .blendMode(.screen)
             }
             .frame(width: 300, height: 300)

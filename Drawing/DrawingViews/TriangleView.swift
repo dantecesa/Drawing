@@ -29,18 +29,20 @@ struct TriangleView: View {
         VStack(spacing: 50) {
             Triangle()
                 .stroke(DrawingAppColor.colors[selectedColor].1, style: StrokeStyle(lineWidth: strokeLineWidth, lineCap: .round, lineJoin: .round))
+                .animation(.interpolatingSpring(stiffness: 50, damping: 5), value: strokeLineWidth)
                 .rotationEffect(.degrees(rotationSlider))
+                .animation(.default, value: rotationSlider)
                 .frame(width: 200, height: 200)
                 
                 .padding()
             
             List {
-                Text("Line Width: \(String(format: "%.0f", strokeLineWidth))")
+                Text("Line Width: \(String(format: "%.0f", strokeLineWidth)) px")
                 Slider(value: $strokeLineWidth, in: 1...50) {
                     Text("Line width")
                 }
                 
-                Text("Rotation: \(String(format: "%.0f", rotationSlider))")
+                Text("Rotation: \(String(format: "%.0f", rotationSlider))˚")
                 Slider(value: $rotationSlider, in: 0...360) {
                     Text("Rotation")
                         .foregroundColor(.white)
