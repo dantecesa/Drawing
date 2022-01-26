@@ -64,12 +64,14 @@ struct SpirographView: View {
     @State private var outerRadius: Double = 75.0
     @State private var distance: Double = 25.0
     @State private var amount: Double = 0
+    @State private var amountZero: Double = 0
     @State private var hue: Double = 0.6
+    @State private var toggleAmount: Bool = true
     
     var body: some View {
         VStack(spacing: 50) {
-            Spirograph(innerRadius: Int(innerRadius), outerRadius: Int(outerRadius), distance: Int(distance), amount: amount)
-                .stroke(Color(hue: hue, saturation: 1, brightness: 1    ), style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
+            Spirograph(innerRadius: Int(innerRadius), outerRadius: Int(outerRadius), distance: Int(distance), amount: toggleAmount ? amount : amountZero)
+                .stroke(Color(hue: hue, saturation: 1, brightness: 1), style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
                 .animation(.default.delay(0.25), value: amount)
                 .frame(width: 300, height: 300)
                 .onAppear {
@@ -80,7 +82,7 @@ struct SpirographView: View {
             
             List {
                 Text("Amount")
-                Slider(value: $amount)
+                Slider(value: toggleAmount ? $amount : $amountZero)
                 
                 Text("Inner Radius: \(String(format: "%.0f", innerRadius))")
                 Slider(value: $innerRadius, in: 10...150, step: 1)
@@ -96,6 +98,15 @@ struct SpirographView: View {
             }
         }
         .preferredColorScheme(.dark)
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                Button("Toggle Drawing") {
+                    withAnimation {
+                        toggleAmount.toggle()
+                    }
+                }
+            }
+        }
     }
 }
 
