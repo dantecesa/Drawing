@@ -15,7 +15,11 @@ struct ContentView: View {
                     TriangleView()
                 })
                 
-                NavigationLink("RGB Values", destination: {
+                NavigationLink("Arc", destination: {
+                    ArcView()
+                })
+                
+                NavigationLink("RGB Circles", destination: {
                     RGBCircles()
                 })
             }

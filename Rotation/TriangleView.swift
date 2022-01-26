@@ -27,11 +27,11 @@ struct TriangleView: View {
     
     var body: some View {
         VStack(spacing: 50) {
-            Spacer()
             Triangle()
                 .stroke(.white, style: StrokeStyle(lineWidth: strokeLineWidth, lineCap: .round, lineJoin: .round))
                 .rotationEffect(.degrees(rotationSlider))
                 .frame(width: 200, height: 200)
+                
                 .padding()
             
             List {
