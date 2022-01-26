@@ -34,8 +34,8 @@ struct Arrow: Shape {
 }
 
 struct ArrowView: View {
-    @State var lineWidth: Double = 10
-    @State var rotationAngle: Double = 45
+    @State var lineWidth: Double = 1
+    @State var rotationAngle: Double = 0
     @State var selectedColor: Int = 4
     
     var body: some View {
@@ -43,7 +43,13 @@ struct ArrowView: View {
             Arrow()
                 .stroke(DrawingAppColor.colors[selectedColor].1, style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
                 .rotationEffect(.degrees(rotationAngle))
+                .animation(.default, value: lineWidth)
+                .animation(.default, value: rotationAngle)
                 .frame(width: 300, height: 300)
+                .onAppear {
+                    lineWidth = 10
+                    rotationAngle = 45
+                }
             
             List {
                 Text("Line Width: \(String(format: "%.0f", lineWidth)) px")
@@ -54,7 +60,8 @@ struct ArrowView: View {
                 
                 ColorHelperView(selectedColor: $selectedColor)
             }
-        }.preferredColorScheme(.dark)
+        }
+        .preferredColorScheme(.dark)
     }
 }
 

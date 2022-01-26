@@ -23,6 +23,9 @@ struct ContentView: View {
             }
             .padding(.top, 10)
             .navigationTitle("Drawing 101")
+            
+            TriangleView()
+            
         }.preferredColorScheme(.dark)
     }
 }

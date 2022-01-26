@@ -37,6 +37,11 @@ struct RGBCircles: View {
             
             Slider(value: $amount)
                 .padding()
+                .onAppear {
+                    withAnimation(.default) {
+                        amount = 0.75
+                    }
+                }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.black)

@@ -21,7 +21,7 @@ struct Triangle: Shape {
 }
 
 struct TriangleView: View {
-    @State var strokeLineWidth: Double = 20
+    @State var strokeLineWidth: Double = 1
     @State var rotationSlider: Double = 0
     @State var selectedColor: Int = 1
     
@@ -33,6 +33,9 @@ struct TriangleView: View {
                 .rotationEffect(.degrees(rotationSlider))
                 .animation(.default, value: rotationSlider)
                 .frame(width: 200, height: 200)
+                .onAppear {
+                    strokeLineWidth = 20
+                }
                 
                 .padding()
             

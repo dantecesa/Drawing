@@ -38,8 +38,8 @@ struct Flower: Shape {
 }
 
 struct FlowerView: View {
-    @State private var petalOffset: Double = -5
-    @State private var petalWidth: Double = 38
+    @State private var petalOffset: Double = -40
+    @State private var petalWidth: Double = 0
     @State private var eoFillOn: Bool = false
     @State private var selectedColor: Int = 5
     
@@ -51,6 +51,10 @@ struct FlowerView: View {
                 .animation(.default, value: petalOffset)
                 .animation(.default, value: petalWidth)
                 .frame(width: 300, height: 300)
+                .onAppear {
+                    petalOffset = 0
+                    petalWidth = 36
+                }
             
             List {
                 Text("Offset: \(String(format: "%.0f", petalOffset))")
